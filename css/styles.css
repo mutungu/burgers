@@ -200,3 +200,458 @@ hr {
     font-size: 0.9vw;
 }
 
+/* - - - order-modal section - - - */
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#order-modal {
+    width: 90%;
+    height: 80vh;
+    padding: 5%;
+    background-color: #ffff;
+    position: fixed;
+    margin-top: 5%;
+    border-radius: 1.5vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
+    animation: appear 0.5s;
+    transition: 0.5s ease-out;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+   display: none;
+}
+
+#order-modal svg{
+    position: absolute;
+    width: 2vw;
+    left: 96%;
+    top: 3%;
+    cursor: pointer;
+    color: #ca0808;
+}
+
+#order-modal h3 {
+    color: #ca0808;
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+}
+
+#order-modal .selection {
+    width: 50%;
+}
+
+#order-modal .selection form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#order-modal .selection form div {
+    display: flex;
+    margin: 3% 0;
+}
+
+#order-modal .selection form .name-email {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#order-modal .selection form .name-email input {
+    padding: 2% 3%;
+    font-size: 0.7vw;
+    width: 48%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+#order-modal .selection form .size-type {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#order-modal .selection form .size-type select {
+    padding: 2% 3%;
+    font-size: 0.7vw;
+    background-color: #f3f3f3;
+    width: 48%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+#order-modal .selection form .crust-quantity {
+    width: 100%;
+    justify-content: space-between;
+}
+
+#order-modal .selection form .crust-quantity select {
+    padding: 2% 3%;
+    font-size: 0.7vw;
+    background-color: #f3f3f3;
+    width: 48%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+#order-modal .selection form .crust-quantity input[type=number] {
+    padding: 2% 3%;
+    font-size: 0.7vw;
+    background-color: #f3f3f3;
+    width: 48%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+#order-modal .selection form .toppings {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#order-modal .selection form .toppings div {
+    margin-top: 0;
+}
+
+#order-modal .selection form .toppings div div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#order-modal .selection form .toppings div div label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#order-modal .selection form .toppings div div label p {
+    cursor: pointer;
+}
+
+#order-modal .selection form .toppings div div label input[type=checkbox] {
+    display: none;
+}
+
+#order-modal .selection form .toppings div div label input[type=checkbox]:checked ~ div {
+    background-color: #ca0808;
+}
+
+#order-modal .selection form .toppings div div label .checkbox__marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1vw;
+    height: 1vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.25vw;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+#order-modal .selection form .toppings div div label .checkbox__marker::after {
+    content: "\2714";
+    color: #fff;
+    font-size: 0.8vw;
+}
+
+#order-modal .selection form div input[type=submit]{
+    background-color: #ca0808;
+    color: #fff;
+    padding: 10% 20%;
+    outline: none;
+    border: 0.2vw solid #ca0808;
+    margin-top: 2%;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 0.7vw;
+}
+
+#order-modal .order-summary {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#order-modal .order-summary label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+}
+
+#order-modal .order-summary label input[type=checkbox] {
+    display: none;
+}
+
+#order-modal .order-summary label p {
+    cursor: pointer;
+}
+
+#order-modal .order-summary label input[type=checkbox]:checked ~ div {
+    background-color: #ca0808;
+}
+
+#order-modal .order-summary label .checkbox__marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1vw;
+    height: 1vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.25vw;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+#order-modal .order-summary label .checkbox__marker::after {
+    content: "\2714";
+    color: #fff;
+    font-size: 0.8vw;
+}
+
+#order-modal .order-summary input {
+    padding: 2% 3%;
+    font-size: 0.7vw;
+    width: 48%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    animation: appear 0.5s;
+}
+
+#order-modal .order-summary input.hide {
+    display: none;
+}
+
+#order-modal .order-summary input[type=submit]{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-top: 5%;
+    background-color: #ca0808;
+    color: #fff;
+    padding: 1% 2%;
+    outline: none;
+    border: 0.2vw solid #ca0808;
+    margin-top: 2%;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 0.7vw;
+}
+
+
+/* - - - mobile app section - - - */
+#cta{
+    width: 100%;
+    padding: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ca0808;
+}
+
+#cta .text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#cta .text .words {
+    width: 100%;
+}
+
+#cta .text .words h3 {
+    font-size: 3.5vw;
+    text-align: left;
+    padding-right: 10%;
+    margin-bottom: 5%;
+    color: #fff;
+}
+
+#cta .text .download {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+#cta .text .download .android {
+    width: 10vw;
+    margin: 0 3% 0 0;
+}
+
+#cta .text div .apple {
+    width: 9vw;
+}
+
+#cta .images{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#cta .images img{
+    width: 15vw;
+    margin-left: 10%;
+    border-radius: 2.5vw;
+    box-shadow: -0.5vw 0.7vw 0.7vw rgba(0, 0, 0, 0.3);
+}
+
+
+/* - - - contact section - - - */
+#contact{
+    width: 100%;
+    padding: 5% 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#contact .form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#contact .form form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact .form form div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#contact .form form input {
+    padding: 3% 4%;
+    font-size: 0.65vw;
+    margin: 3% 0;
+    border-radius: 0.5vw;
+    outline: none;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+}
+
+#contact .form form textarea {
+    padding: 4%;
+    font-size: 0.65vw;
+    margin: 3% 2%;
+    border-radius: 0.5vw;
+    border: 0.1vw solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    width: 100%;
+    height: 7vw;
+}
+
+#contact .form form input[type=submit]{
+    background-color: #ca0808;
+    width: 30%;
+    color: #fff;
+    font-size: 0.8vw;
+    padding: 3% 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#contact .form h3, #contact .contact-info h3 {
+    color: #ca0808;
+    margin-bottom: 5%;
+    font-size: 1.5vw;
+}
+
+#contact .contact-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#contact .contact-info div {
+    display: flex;
+    width: 100%;
+    padding: 3% 0;
+
+}
+
+#contact .contact-info div svg {
+    width: 2vw;
+    color: #ca0808;
+    margin-right: 3%;
+}
+
+/* - - - footer section - - - */
+footer{
+    width: 100%;
+    padding: 3% 10% 2% 10%;
+    background-color: #f3f3f3;
+}
+
+footer .social {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social svg {
+   width: 2vw;
+   margin: 0 1%;
+   color: #ca0808;
+}
+
+footer .footer-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+}
+
+footer .footer-text p {
+    font-size: 0.85vw;
+}
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
