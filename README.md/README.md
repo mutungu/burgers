@@ -5,7 +5,7 @@ This is a simple web application through which a user can order a wide selection
 
 ![Project Image](assets/images/readme-image.png)
 
-### By: Samuel Martins
+### By: wilson gitau
 
 ## Table of Content
 
